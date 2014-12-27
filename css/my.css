@@ -18,29 +18,33 @@ body{
 		color: #FFF;	
 
 	}
-.splash-container{
-    background: #1f8dd6;
-    z-index: 1;
-    overflow: hidden;
-    /* The following styles are required for the "scroll-over" effect */
-    width: 100%;
-    height: 88%;
-    top: 0;
-    left: 0;
-    position: fixed !important;
-	
-	
+.splash-container img{
+	z-index: -1;
+	overflow: hidden;
+	/* The following styles are required for the "scroll-over" effect */
+	width: 100%;
+	height: 88%;
+	top: 0;
+	left: 0;
+	position: fixed !important;
+	background-image: url(../images/myColl/a1.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size:cover;
 	
 	}
 .splash {
-    /* absolute center .splash within .splash-container */
-    width: 80%;
-    height: 50%;
-    margin: auto;
-    position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
-    text-align: center;
-    text-transform: uppercase;
+	/* absolute center .splash within .splash-container */
+	width: 80%;
+	height: 50%;
+	margin: auto;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	text-transform: uppercase;
 }
 .splash-head {
     font-size: 2em;

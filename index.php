@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -11,42 +12,59 @@
     <link href="css/my.css" rel="stylesheet" type="text/css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+<?php
+header("Content-Type: text/html; charset=utf-8");
+include('../Connections/localhost.php');
+	$sel_db=@mysql_select_db("test");
+	if(!$sel_db){echo "no";}else{echo "Yes";}
+	$result=mysql_query("SELECT cID,cPic FROM collection");
+	if(!$result){echo "yes";}
+	$myResult=mysql_query("SELECT * FROM `collection` ORDER BY rand() LIMIT 0,1");
+	
+	
+	
+	
+?>
 
 <body>
 <div class="header">
     <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Your Site</a>
+        <a class="pure-menu-heading" href="">Alex Lin</a>
 
         <ul>
             <li class="pure-menu-selected"><a href="#">Home</a></li>
-            <li><a href="#">Tour</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">說明 Documents</a></li>
+            <li><a href="#">登入</a></li>
         </ul>
     </div>
 </div>
 
 <div class="splash-container">
+<?php while($row=mysql_fetch_assoc($myResult)){?>
+<img src="images/myColl/<?php echo $row["cPic"]?>" alt="image" name="myCollection" width="400" height="300">
+
+<?php }?>
     <div class="splash">
-        <h1 class="splash-head">Big Bold Text</h1>
+      <h1 class="splash-head">演示作品</h1>
         <p class="splash-subhead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+           大家好，我來自台中，我的名字是林梅芳，歡迎觀賞作品
         </p>
         <p>
-            <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
+            <a href="http://purecss.io" class="pure-button pure-button-primary">知道更多AlexLin</a>
         </p>
-    </div>
+  </div>
 </div>
 <!---------------------------------------->
 <div class="content-wrapper">
     <div class="content">
-        <h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>
+        <h2 class="content-head is-center">首先呢，我們會教導你第一步</h2>
 
         <div class="pure-g">
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
 
                 <h3 class="content-subhead">
                     <i class="fa fa-rocket"></i>
-                    Get Started Quickly
+                    如何知道今天如何
                 </h3>
                 <p>
                     Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
@@ -55,7 +73,7 @@
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                 <h3 class="content-subhead">
                     <i class="fa fa-mobile"></i>
-                    Responsive Layouts
+                    規劃自己
                 </h3>
                 <p>
                     Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
@@ -64,7 +82,7 @@
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                 <h3 class="content-subhead">
                     <i class="fa fa-th-large"></i>
-                    Modular
+                   欣賞模式
                 </h3>
                 <p>
                     Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
@@ -73,7 +91,7 @@
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                 <h3 class="content-subhead">
                     <i class="fa fa-check-square-o"></i>
-                    Plays Nice
+                   確定清單
                 </h3>
                 <p>
                     Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
@@ -84,11 +102,11 @@
 <!----------------------------------------------------------------->
     <div class="ribbon l-box-lrg pure-g">
         <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-            <img class="pure-img-responsive" alt="File Icons" width="300" src="img/common/file-icons.png">
+            <img src="" alt="File Icons" width="300" height="300" class="pure-img-responsive">
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
 
-            <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
+            <h2 class="content-head content-head-ribbon">一天的過去</h2>
 
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -100,13 +118,13 @@
     </div>
 
     <div class="content">
-        <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
+        <h2 class="content-head is-center">2014年個人追蹤器</h2>
 
         <div class="pure-g">
             
 
             <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <h4>Contact Us</h4>
+                <h4>追蹤個人</h4>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -114,7 +132,7 @@
                     consequat.
                 </p>
 
-                <h4>More Information</h4>
+                <h4>更多行蹤</h4>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua.
@@ -125,7 +143,7 @@
     </div>
 
     <div class="footer l-box is-center">
-        View the source of this layout to learn more. Made with love by the YUI Team.
+       2014&copy;AlexLinn
     </div>
 
 </div>
