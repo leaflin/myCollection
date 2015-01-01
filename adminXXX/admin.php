@@ -42,6 +42,12 @@
         <div class="header">
             <h1>歡迎Alex Linn</h1>
             <h2>快速管理你的網站</h2>
+<?php
+ date_default_timezone_set('Asia/Taipei');
+
+ echo date("Y-m-d:h:i:s");
+?>
+
         </div>
 
         <div class="content">

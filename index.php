@@ -31,10 +31,6 @@ include('../Connections/localhost.php');
 	$result=mysql_query("SELECT cID,cPic,cHead FROM collection");
 	if(!$result){echo "yes";}
 	$myResult=mysql_query("SELECT * FROM `collection` ORDER BY rand() LIMIT 0,1");
-	
-	
-	
-	
 ?>
 
 <body>
@@ -110,31 +106,48 @@ include('../Connections/localhost.php');
             </div>
         </div>
     </div>
+<!--自我介紹----------------------------------------------->
+<?php
+	$sel_db=@mysql_select_db("test");
+	if(!$sel_db){echo "no";}else{echo "Yes";}
+	$result=mysql_query("SELECT iID,iPic,iHead,iScr FROM intro");
+	if(!$result){echo "yes";}
+	$myResult=mysql_query("SELECT * FROM `intro` WHERE 1");
+	while($row=mysql_fetch_assoc($myResult)){ ?>
+<?php /*?><?php
+$sel_db=@mysql_select_db("test");
+	if(!$sel_db){echo "no";}else{echo "Yes";}
+	$result=mysql_query("SELECT iID,iPic,iHead,iScr FROM intro");
+	if(!$result){echo "yes";}
+	$myResult=mysql_query("SELECT * FROM `intro`");
+	mysql_data_seek($myResult,0);
+	$row_result=mysql_fetch_assoc($myResult);
+foreach($row_result as $item=>$value){ 
+ echo $item."=".$value."<br/>";
+}
+<?php */?>
 
     <div class="ribbon l-box-lrg pure-g">
         <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-            <img class="pure-img-responsive" alt="File Icons" width="484" src="images/common/file-icons.png">
+            <img class="pure-img-responsive" alt="File Icons" width="300" src="images/common/<?php echo $row["iPic"]?>">
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
 
-            <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
+          <h2 class="content-head content-head-ribbon"><?php echo $row["iHead"];?>
+</h2>
 
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor.
+                <?php echo $row["iScr"];?>
             </p>
-           
-             <a href="tel:09630000">
-             <button class="button-success pure-button">電話</button>
-             </a>
-          <a href="#" target="_blank">
+          <a href="tel:09630000">
+          <button class="button-success pure-button">電話</button>
+          </a>
+          <a href="https://github.com/leaflin" target="_blank">
           <button class="button-success pure-button">git</button>
           </a>
              <a href="mailto:kabul757@gmail.com">
              <button class="button-success pure-button">Email</button>
-             </a>
+          </a>
               
              <a href="https://plus.google.com/+AlexLinnAlex/posts" target="_blank">
              <button class="button-success pure-button">G+</button>
@@ -143,6 +156,9 @@ include('../Connections/localhost.php');
              <button class="pure-button pure-button-primary">我的履歷</button>
              </a></div>
     </div>
+<?php }?>         
+
+<!--自我介紹----------------------------------------------->
 
     <div class="content">
         <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
