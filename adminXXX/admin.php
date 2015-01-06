@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!doctype html>
 <html lang="zh-tw">
 <head>
@@ -14,6 +17,10 @@
     <!--<![endif]-->
 </head>
 <body>
+<?php if(isset($_SESSION["membername"])){ 
+  echo $_SESSION["membername"];
+?>
+
 <div id="layout">
     <!-- Menu toggle -->
     <a href="#menu" id="menuLink" class="menu-link">
@@ -89,6 +96,10 @@
 
 
 <script src="js/ui.js"></script>
+<?php }else{
+		header("Location: login.php");?>
+
+<?php }?>
 
 
 </body>

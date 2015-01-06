@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
-<link rel="stylesheet" href="css/marketing.css">
+<link rel="stylesheet" href="../css/marketing.css">
     <!--<![endif]-->
 
 </head>
@@ -64,37 +64,47 @@ include('../Connections/localhost.php');
 </div>
 <div class="content-wrapper">
     <div class="content">
-        <h1 class="content-head is-center"><i class="fa fa-mobile">作品介紹</i></h1>
+        <h2 class="content-head is-center">首先第一步</h2>
 
         <div class="pure-g">
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
 
                 <h3 class="content-subhead">
                     <i class="fa fa-rocket"></i>
-                    電子書
+                    快速知道
                 </h3>
-                <img class="pure-img" src="images/common/file-icons.png" width="484" height="282">
-<p>
-            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-        </p>
-         <a href="collections.php" target="_blank"><button class="button-small pure-button button-success">觀看</button></a>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                <h3 class="content-subhead">
-                    <i class="fa fa-mobile"></i>
-                   網站
-                </h3>
-                <img class="pure-img" src="images/common/file-icons.png" width="484" height="282">
-                
                 <p>
                     Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
                 </p>
-        <a href="collections.php" target="_blank"><button class="button-small pure-button button-success">觀看</button></a>
-
             </div>
-            
-            
-      </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-mobile"></i>
+                   知道如何
+                </h3>
+                <p>
+                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-th-large"></i>
+                    更多演示
+                </h3>
+                <p>
+                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-check-square-o"></i>
+                    實際操作
+                </h3>
+                <p>
+                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                </p>
+            </div>
+        </div>
     </div>
 <!--自我介紹----------------------------------------------->
 <?php
@@ -142,7 +152,7 @@ foreach($row_result as $item=>$value){
              <a href="https://plus.google.com/+AlexLinnAlex/posts" target="_blank">
              <button class="button-success pure-button">G+</button>
              </a>
-             <a href="如何寫履歷自傳.pdf" target="_blank">
+             <a href="../如何寫履歷自傳.pdf" target="_blank">
              <button class="pure-button pure-button-primary">我的履歷</button>
              </a></div>
     </div>
@@ -151,30 +161,27 @@ foreach($row_result as $item=>$value){
 <!--自我介紹----------------------------------------------->
 
     <div class="content">
-        <h1 class="content-head is-center"><i class="fa fa-mobile">學習計畫</i></h1>
+        <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
 
         <div class="pure-g">
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-<!--menu------------------------------------->         
-<h3>計畫清單</h3>
-<div class="pure-menu pure-menu-open">
-    <a class="pure-menu-heading">Yahoo! Sites</a>
+            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
 
-    <ul>
-        <li><a href="#">Flickr</a></li>
-        <li><a href="#">Messenger</a></li>
-        <li><a href="#">Sports</a></li>
-        <li><a href="#">Finance</a></li>
-        <li class="pure-menu-heading">More Sites!</li>
-        <li><a href="#">Games</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">OMG!</a></li>
-    </ul>
-</div>                
-            
-            
-<!--menu------------------------------------->
-</div>
+                        <label for="name">Your Name</label>
+                        <input id="name" type="text" placeholder="Your Name">
+
+
+                        <label for="email">Your Email</label>
+                        <input id="email" type="email" placeholder="Your Email">
+
+                        <label for="password">Your Password</label>
+                        <input id="password" type="password" placeholder="Your Password">
+
+                        <button type="submit" class="pure-button">Sign Up</button>
+                    </fieldset>
+                </form>
+            </div>
 
             <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
                 <h4>Contact Us</h4>
@@ -196,10 +203,7 @@ foreach($row_result as $item=>$value){
     </div>
 
     <div class="footer l-box is-center">
-      <h2><i class="fa fa-mobile">關於我們&nbsp;</i><i class="fa fa-mobile">作品介紹&nbsp;</i><i class="fa fa-mobile">學習計畫</i>
-      </h2>
-      <p>AlexLinn&copy;2014/12/30
-      </p>
+	AlexLinn&copy;2014/12/30
     </div>
 
 </div>

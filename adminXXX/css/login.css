@@ -1,0 +1,31 @@
+/* CSS Document */
+h1{
+	color: #666;
+	}
+h2{
+	color: #999;	
+	}
+#header{
+	height: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	text-align: center;
+	display: block;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #999;
+	width: 80%;
+}
+#content form{
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: auto;
+	width: 60%;
+	position: relative;
+	
+	
+	}
